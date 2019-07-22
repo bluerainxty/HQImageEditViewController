@@ -66,10 +66,10 @@ iOS 头像裁剪、图片裁剪 微信头像裁剪
   #
 
   # s.platform     = :ios
-  s.platform     = :ios, "9.2"
+  # s.platform     = :ios, "9.2"
 
   #  When using multiple platforms
-  # s.ios.deployment_target = "5.0"
+  s.ios.deployment_target = "9.2"
   # s.osx.deployment_target = "10.7"
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
