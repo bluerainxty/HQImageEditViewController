@@ -107,7 +107,7 @@ iOS 头像裁剪、图片裁剪 微信头像裁剪
   #
 
   # s.resource  = "icon.png"
-  s.resources = "HQImageEditViewControllerDemo/HQImageEditViewController/Source/*.png"
+  s.resources = "HQImageEditViewControllerDemo/HQImageEditViewController/Source/*."
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
