@@ -323,7 +323,7 @@
     if (!_imageWrap) {
         _imageWrap = [[UIView alloc] initWithFrame:CGRectZero];
         
-        UIImageView *topLeft = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"cycle_top_left" ofType:@"png"]]];
+        UIImageView *topLeft = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cycle_top_left"]];
         topLeft.tag = 0;
         [_imageWrap addSubview:topLeft];
         [topLeft mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -331,7 +331,7 @@
             make.width.height.equalTo(@24);
         }];
         
-        UIImageView *topright = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"cycle_top_right" ofType:@"png"]]];
+        UIImageView *topright = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cycle_top_right"]];
         topright.tag = 1;
         [_imageWrap addSubview:topright];
         [topright mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -339,7 +339,7 @@
             make.width.height.equalTo(@24);
         }];
         
-        UIImageView *bottomLeft = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"cycle_bottom_left" ofType:@"png"]]];
+        UIImageView *bottomLeft = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cycle_bottom_left"]];
         bottomLeft.tag = 2;
         [_imageWrap addSubview:bottomLeft];
         [bottomLeft mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -347,7 +347,7 @@
             make.width.height.equalTo(@24);
         }];
         
-        UIImageView *bottomRight = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"cycle_bottom_right" ofType:@"png"]]];
+        UIImageView *bottomRight = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cycle_bottom_right"]];
         bottomRight.tag = 3;
         [_imageWrap addSubview:bottomRight];
         [bottomRight mas_makeConstraints:^(MASConstraintMaker *make) {
