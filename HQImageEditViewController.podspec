@@ -66,7 +66,7 @@ iOS 头像裁剪、图片裁剪 微信头像裁剪
   #
 
   # s.platform     = :ios
-  s.platform     = :ios, "10.0"
+  s.platform     = :ios, "9.2"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
