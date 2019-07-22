@@ -7,6 +7,7 @@
 //
 
 #import "HQEditImageActionView.h"
+#import "HQImageEditViewController.h"
 
 @interface HQEditImageActionView ()
 
@@ -82,7 +83,9 @@
     if (!_rotateButton) {
         _rotateButton = [[UIButton alloc] init];
         
-        [_rotateButton setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ic_rotate_90_degrees_ccw" ofType:@"png"]] forState:UIControlStateNormal];
+        NSBundle *imageBundle = [NSBundle bundleForClass:[HQImageEditViewController class]];
+        
+        [_rotateButton setImage:[UIImage imageNamed:@"ic_rotate_90_degrees_ccw" inBundle:imageBundle compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
         _rotateButton.tag = 0;
         _rotateButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
         [_rotateButton.imageView mas_makeConstraints:^(MASConstraintMaker *make) {

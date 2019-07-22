@@ -7,6 +7,7 @@
 //
 
 #import "HQEditImageEditView.h"
+#import "HQImageEditViewController.h"
 
 @interface HQEditImageEditView ()
 @property (nonatomic, assign) BOOL isMoving;
@@ -321,9 +322,13 @@
 
 - (UIView *)imageWrap {
     if (!_imageWrap) {
+        
+        
+        NSBundle *imageBundle = [NSBundle bundleForClass:[HQImageEditViewController class]];
+        
         _imageWrap = [[UIView alloc] initWithFrame:CGRectZero];
         
-        UIImageView *topLeft = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cycle_top_left"]];
+        UIImageView *topLeft = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cycle_top_left" inBundle:imageBundle compatibleWithTraitCollection:nil]];
         topLeft.tag = 0;
         [_imageWrap addSubview:topLeft];
         [topLeft mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -331,7 +336,7 @@
             make.width.height.equalTo(@24);
         }];
         
-        UIImageView *topright = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cycle_top_right"]];
+        UIImageView *topright = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cycle_top_right" inBundle:imageBundle compatibleWithTraitCollection:nil]];
         topright.tag = 1;
         [_imageWrap addSubview:topright];
         [topright mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -339,7 +344,7 @@
             make.width.height.equalTo(@24);
         }];
         
-        UIImageView *bottomLeft = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cycle_bottom_left"]];
+        UIImageView *bottomLeft = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cycle_bottom_left" inBundle:imageBundle compatibleWithTraitCollection:nil]];
         bottomLeft.tag = 2;
         [_imageWrap addSubview:bottomLeft];
         [bottomLeft mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -347,7 +352,7 @@
             make.width.height.equalTo(@24);
         }];
         
-        UIImageView *bottomRight = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cycle_bottom_right"]];
+        UIImageView *bottomRight = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cycle_bottom_right" inBundle:imageBundle compatibleWithTraitCollection:nil]];
         bottomRight.tag = 3;
         [_imageWrap addSubview:bottomRight];
         [bottomRight mas_makeConstraints:^(MASConstraintMaker *make) {
